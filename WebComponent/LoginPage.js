@@ -8,8 +8,8 @@ class LoginPage {
         this.loginButton = By.xpath("//input[@id='login-button']");
         this.errorMessage = By.css('.error-message-container');
     }
-    async navigate(){
-        await this.driver.get("https://www.saucedemo.com/")
+    async navigate(browser){
+        await this.driver.get(browser);
     }
     async login(username, password){
         await this.driver.findElement(this.usernameInput).sendKeys(username);
